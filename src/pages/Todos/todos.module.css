@@ -1,0 +1,54 @@
+.todoListContainer {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.todoListContainer > header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoListContainer > header > button {
+  width: fit-content;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.createBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+  gap: 10px;
+}
+.createBox > button {
+  width: 100px;
+}
+.createBox > input {
+  width: 400px;
+}
+
+.todoList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: hidden;
+}
+.todoList > ul {
+  height: inherit;
+  overflow: scroll;
+  gap: 6px;
+}
+.todoList > ul > li {
+  list-style: none;
+}
