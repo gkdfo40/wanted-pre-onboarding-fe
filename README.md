@@ -4,7 +4,6 @@
 ## skill
 + typescript
 + react
-+ css
 + axios
 + react-router-dom
 
