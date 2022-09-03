@@ -1,8 +1,14 @@
-import { useInput, useOnClickOutside } from 'hooks';
-import { useRef, useState } from 'react';
+import { useInput, useOnClickOutside } from "hooks";
+import { useRef, useState } from "react";
 
-import { TodoProps } from 'types';
-import styles from './todo.module.css';
+import { ITodo } from "types";
+import styles from "./todo.module.css";
+
+interface TodoProps {
+  todo: ITodo;
+  updateTodo: (data: ITodo) => void;
+  deleteTodo: (data: ITodo) => void;
+}
 
 export function Todo({ todo, updateTodo, deleteTodo }: TodoProps) {
   const [todoValue, setTodoValue] = useState(todo);
@@ -35,7 +41,7 @@ export function Todo({ todo, updateTodo, deleteTodo }: TodoProps) {
         <input {...modifyTodo} />
       ) : (
         <span
-          className={todo.isCompleted ? styles.isComplte : 'none'}
+          className={todo.isCompleted ? styles.isComplte : "none"}
           onClick={onClickActive}
         >
           {todo.todo}

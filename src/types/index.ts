@@ -9,9 +9,3 @@ export interface userProps {
   email: string;
   password: string;
 }
-
-export interface TodoProps {
-  todo: ITodo;
-  updateTodo: (data: ITodo) => void;
-  deleteTodo: (data: ITodo) => void;
-}
